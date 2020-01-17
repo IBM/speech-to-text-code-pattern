@@ -1,0 +1,418 @@
+[
+  {
+    "name": "en-US_BroadbandModel",
+    "language": "en-US",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/en-US_BroadbandModel",
+    "rate": 16000,
+    "filename": "en-US_Broadband-sample.wav",
+    "keywords": "IBM, admired, AI, transformations, cognitive",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "US English (16khz Broadband)"
+  },
+  {
+    "name": "en-US_NarrowbandModel",
+    "language": "en-US",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/en-US_NarrowbandModel",
+    "rate": 8000,
+    "filename": "en-US_Narrowband-sample.wav",
+    "keywords": "course online, four hours, help",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "US English (8khz Narrowband)"
+  },
+  {
+    "name": "en-US_ShortForm_NarrowbandModel",
+    "language": "en-US",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/en-US_ShortForm_NarrowbandModel",
+    "rate": 8000,
+    "filename": "en-US_ShortForm_Narrowband-sample.wav",
+    "keywords": "twenty thousand dollars, filled out, car",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "US English Short Form (8khz Narrowband)"
+  },
+  {
+    "name": "fr-FR_BroadbandModel",
+    "language": "fr-FR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/fr-FR_BroadbandModel",
+    "rate": 16000,
+    "filename": "fr-FR_Broadband-sample.wav",
+    "keywords": "durée du travail, loisirs",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "French (16khz Broadband)"
+  },
+  {
+    "name": "fr-FR_NarrowbandModel",
+    "language": "fr-FR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/fr-FR_NarrowbandModel",
+    "rate": 8000,
+    "filename": "fr-FR_Narrowband-sample.wav",
+    "keywords": "durée du travail, loisirs",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "French (8khz Narrowband)"
+  },
+  {
+    "name": "pt-BR_BroadbandModel",
+    "language": "pt-BR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/pt-BR_BroadbandModel",
+    "rate": 16000,
+    "filename": "pt-BR_Broadband-sample.wav",
+    "keywords": "sistema da ibm, setor bancário, qualidade, necessidades dos clientes",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "Brazilian Portuguese (16khz Broadband)"
+  },
+  {
+    "name": "pt-BR_NarrowbandModel",
+    "language": "pt-BR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/pt-BR_NarrowbandModel",
+    "rate": 8000,
+    "filename": "pt-BR_Narrowband-sample.wav",
+    "keywords": "cozinha, inovadoras receitas, criatividade",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "Brazilian Portuguese (8khz Narrowband)"
+  },
+  {
+    "name": "ja-JP_BroadbandModel",
+    "language": "ja-JP",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ja-JP_BroadbandModel",
+    "rate": 16000,
+    "filename": "ja-JP_Broadband-sample.wav",
+    "keywords": "音声認識, ディープラーニング, 技術",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Japanese (16khz Broadband)"
+  },
+  {
+    "name": "ja-JP_NarrowbandModel",
+    "language": "ja-JP",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ja-JP_NarrowbandModel",
+    "rate": 8000,
+    "filename": "ja-JP_Narrowband-sample.wav",
+    "keywords": "ご住所, ご本人, 生年月日",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Japanese (8khz Narrowband)"
+  },
+  {
+    "name": "zh-CN_BroadbandModel",
+    "language": "zh-CN",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/zh-CN_BroadbandModel",
+    "rate": 16000,
+    "filename": "zh-CN_Broadband-sample.wav",
+    "keywords": "沃 森 是 认知 , 大 数据 分析 能力",
+    "supported_features": {
+      "custom_language_model": false,
+      "speaker_labels": false
+    },
+    "description": "Mandarin (16khz Broadband)"
+  },
+  {
+    "name": "zh-CN_NarrowbandModel",
+    "language": "zh-CN",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/zh-CN_NarrowbandModel",
+    "rate": 8000,
+    "filename": "zh-CN_Narrowband-sample.wav",
+    "keywords": "公司 的 支持 , 理财 计划",
+    "supported_features": {
+      "custom_language_model": false,
+      "speaker_labels": false
+    },
+    "description": "Mandarin (8khz Narrowband)"
+  },
+  {
+    "name": "ko-KR_BroadbandModel",
+    "language": "ko-KR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ko-KR_BroadbandModel",
+    "rate": 16000,
+    "filename": "ko-KR_Broadband-sample.wav",
+    "keywords": "네 명, 숙박, 호텔, 싱글룸, 두개, 예약",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "Korean (16khz Broadband)"
+  },
+  {
+    "name": "ko-KR_NarrowbandModel",
+    "language": "ko-KR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ko-KR_NarrowbandModel",
+    "rate": 8000,
+    "filename": "ko-KR_Narrowband-sample.wav",
+    "keywords": "생명보험사, 상담원, 본인 확인, 성함, 생년월일, 휴대폰 번호",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "Korean (8khz Narrowband)"
+  },
+  {
+    "name": "es-ES_BroadbandModel",
+    "language": "es-ES",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-ES_BroadbandModel",
+    "rate": 16000,
+    "filename": "es-ES_Broadband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Spanish (16khz Broadband)"
+  },
+  {
+    "name": "es-ES_NarrowbandModel",
+    "language": "es-ES",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-ES_NarrowbandModel",
+    "rate": 8000,
+    "filename": "es-ES_Narrowband-sample.wav",
+    "keywords": "México, Grecia, diciembre",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Spanish (8khz Narrowband)"
+  },
+  {
+    "name": "ar-AR_BroadbandModel",
+    "language": "ar-AR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/ar-AR_BroadbandModel",
+    "rate": 16000,
+    "filename": "ar-AR_Broadband-sample.wav",
+    "keywords": "الطقس , رياح معتدلة",
+    "supported_features": {
+      "custom_language_model": false,
+      "speaker_labels": false
+    },
+    "description": "Modern Standard Arabic (16khz Broadband)"
+  },
+  {
+    "name": "en-GB_BroadbandModel",
+    "language": "en-GB",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/en-GB_BroadbandModel",
+    "rate": 16000,
+    "filename": "en-GB_Broadband-sample.wav",
+    "keywords": "important industry, affordable travel, business",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "GB English (16khz Broadband)"
+  },
+  {
+    "name": "en-GB_NarrowbandModel",
+    "language": "en-GB",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/en-GB_NarrowbandModel",
+    "rate": 8000,
+    "filename": "en-GB_Narrowband-sample.wav",
+    "keywords": "heavy rain, northwest, UK",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "GB English (8khz Narrowband)"
+  },
+  {
+    "name": "de-DE_BroadbandModel",
+    "language": "de-DE",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/de-DE_BroadbandModel",
+    "rate": 16000,
+    "filename": "de-DE_Broadband-sample.wav",
+    "keywords": "diskussion, künstlicher intelligenz, möglichkeiten, grundprinzipien",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "German (16khz Broadband)"
+  },
+  {
+    "name": "de-DE_NarrowbandModel",
+    "language": "de-DE",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/de-DE_NarrowbandModel",
+    "rate": 8000,
+    "filename": "de-DE_Narrowband-sample.wav",
+    "keywords": "Augen, linden bäumen, Türme von Wien",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": false
+    },
+    "description": "German (8khz Narrowband)"
+  },
+  {
+    "name": "es-AR_BroadbandModel",
+    "language": "es-AR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-AR_BroadbandModel",
+    "rate": 16000,
+    "filename": "es-ES_Broadband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Argentinian Spanish (16khz Broadband)"
+  },
+  {
+    "name": "es-AR_NarrowbandModel",
+    "language": "es-AR",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-AR_NarrowbandModel",
+    "rate": 8000,
+    "filename": "es-ES_Narrowband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Argentinian Spanish (8khz Narrowband)"
+  },
+  {
+    "name": "es-CL_BroadbandModel",
+    "language": "es-CL",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-CL_BroadbandModel",
+    "rate": 16000,
+    "filename": "es-ES_Broadband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Chilean Spanish (16khz Broadband)"
+  },
+  {
+    "name": "es-CL_NarrowbandModel",
+    "language": "es-CL",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-CL_NarrowbandModel",
+    "rate": 8000,
+    "filename": "es-ES_Narrowband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Chilean Spanish (8khz Narrowband)"
+  },
+  {
+    "name": "es-CO_BroadbandModel",
+    "language": "es-CO",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-CO_BroadbandModel",
+    "rate": 16000,
+    "filename": "es-ES_Broadband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Colombian Spanish (16khz Broadband)"
+  },
+  {
+    "name": "es-CO_NarrowbandModel",
+    "language": "es-CO",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-CO_NarrowbandModel",
+    "rate": 8000,
+    "filename": "es-ES_Narrowband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Colombian Spanish (8khz Narrowband)"
+  },
+  {
+    "name": "es-MX_BroadbandModel",
+    "language": "es-MX",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-MX_BroadbandModel",
+    "rate": 16000,
+    "filename": "es-ES_Broadband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Mexican Spanish (16khz Broadband)"
+  },
+  {
+    "name": "es-MX_NarrowbandModel",
+    "language": "es-MX",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-MX_NarrowbandModel",
+    "rate": 8000,
+    "filename": "es-ES_Narrowband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Mexican Spanish (8khz Narrowband)"
+  },
+  {
+    "name": "es-PE_BroadbandModel",
+    "language": "es-PE",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-PE_BroadbandModel",
+    "rate": 16000,
+    "filename": "es-ES_Broadband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Peruvian Spanish (16khz Broadband)"
+  },
+  {
+    "name": "es-PE_NarrowbandModel",
+    "language": "es-PE",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/es-PE_NarrowbandModel",
+    "rate": 8000,
+    "filename": "es-ES_Narrowband-sample.wav",
+    "keywords": "Roberto, Pedro",
+    "supported_features": {
+      "custom_language_model": true,
+      "speaker_labels": true
+    },
+    "description": "Peruvian Spanish (8khz Narrowband)"
+  },
+  {
+    "name": "nl-NL_BroadbandModel",
+    "language": "nl-NL",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/nl-NL_BroadbandModel",
+    "rate": 16000,
+    "filename": "nl-NL_Broadband-sample.wav",
+    "keywords": "bestelling, voertuig, auto, aanvraag",
+    "supported_features": {
+      "custom_language_model": false,
+      "speaker_labels": false
+    },
+    "description": "Dutch (16khz Broadband)"
+  },
+  {
+    "name": "nl-NL_NarrowbandModel",
+    "language": "nl-NL",
+    "url": "https://stream.watsonplatform.net/speech-to-text/api/v1/models/nl-NL_NarrowbandModel",
+    "rate": 8000,
+    "filename": "nl-NL_Narrowband-sample.wav",
+    "keywords": "bestelling, voertuig, auto, aanvraag",
+    "supported_features": {
+      "custom_language_model": false,
+      "speaker_labels": true
+    },
+    "description": "Dutch (8khz Narrowband)"
+  }
+]

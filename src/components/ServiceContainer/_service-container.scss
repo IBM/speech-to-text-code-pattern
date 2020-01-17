@@ -1,0 +1,15 @@
+.service-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  overflow-x: hidden;
+  padding: $spacing-07;
+  position: relative;
+
+  @media (min-width: 1200px) {
+    align-items: unset;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

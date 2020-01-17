@@ -1,0 +1,20 @@
+@import './overrides.scss';
+
+.control-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: $spacing-07;
+  padding: $spacing-08;
+  padding-bottom: $spacing-07 * 2;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+
+  .container-title {
+    padding-bottom: $spacing-09;
+  }
+}

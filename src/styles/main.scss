@@ -1,0 +1,20 @@
+// Set theme.
+@import '~@carbon/themes/scss/themes';
+$carbon--theme: $carbon--theme--g10;
+@include carbon--theme();
+
+// vendors
+@import '~carbon-components/scss/globals/scss/styles.scss';
+
+@import './index';
+
+// components
+@import '../components/AudioWave/audio-wave';
+@import '../components/ControlContainer/control-container';
+@import '../components/Header/header';
+@import '../components/KeywordTooltip/keyword-tooltip';
+@import '../components/OutputContainer/output-container';
+@import '../components/ServiceContainer/service-container';
+@import '../components/SubmitContainer/submit-container';
+@import '../components/Toast/toast';
+@import '../components/TranscriptBox/transcript-box';

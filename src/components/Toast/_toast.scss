@@ -1,0 +1,19 @@
+[class*='custom-toast-'] {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  &.enter {
+    /* ToastNotification width is 18rem at this screen size. */
+    left: calc(100% - 19rem);
+    transition-duration: 0.5s;
+    transition-property: left;
+    transition-timing-function: ease;
+
+    @media (min-width: 1584px) {
+      /* ToastNotification width is 22rem at this screen size. */
+      left: calc(100% - 23rem);
+    }
+  }
+}

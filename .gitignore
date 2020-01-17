@@ -1,0 +1,10 @@
+# Dependencies
+.npm
+node_modules
+
+# Config
+.next
+
+# Misc
+.DS_Store
+*.env

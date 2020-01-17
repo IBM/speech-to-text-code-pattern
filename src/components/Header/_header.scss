@@ -1,0 +1,109 @@
+@import './overrides';
+
+.header {
+  background-color: $gray-100;
+  display: flex;
+  min-height: unset;
+  padding: $spacing-07;
+
+  .link-container {
+    align-items: flex-end;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    .link-wrapper {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 992px) {
+        justify-content: flex-end;
+      }
+
+      @media (min-width: 1200px) {
+        align-items: center;
+        flex-direction: row;
+        height: min-content;
+      }
+
+      .link {
+        color: $blue-40;
+
+        &.getting-started:hover {
+          text-decoration: none;
+        }
+
+        &:not(:last-child) {
+          padding-bottom: $spacing-03;
+
+          @media (min-width: 1200px) {
+            padding-bottom: 0;
+            padding-right: $spacing-07;
+          }
+        }
+
+        &-icon {
+          display: block;
+          fill: $white-0;
+
+          @media (min-width: 992px) {
+            display: none;
+          }
+        }
+
+        &-text {
+          display: none;
+          text-align: end;
+
+          @media (min-width: 992px) {
+            display: block;
+          }
+
+          @media (min-width: 1200px) {
+            text-align: unset;
+          }
+        }
+
+        &-button {
+          border-color: $white-0;
+          color: $white-0;
+          display: none;
+          text-align: end;
+
+          &:hover {
+            background-color: $white-0;
+            color: $gray-100;
+
+            .bx--btn__icon path {
+              fill: $gray-100;
+            }
+          }
+
+          @media (min-width: 992px) {
+            display: block;
+          }
+
+          @media (min-width: 1200px) {
+            text-align: unset;
+          }
+        }
+      }
+    }
+  }
+
+  .title-container {
+    color: $gray-10;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    @media (min-width: 1200px) {
+      width: 40%;
+    }
+
+    .header-title {
+      padding-bottom: $spacing-06;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.submit-container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+    max-height: $spacing-08 * 2;
+  }
+
+  .submit-button {
+    max-width: 100%;
+    min-height: $spacing-09;
+    width: 100%;
+
+    @media (min-width: 480px) {
+      flex: 1 1 auto;
+      max-width: unset;
+      width: unset;
+    }
+
+    &:not(label) {
+      margin-bottom: $spacing-03;
+
+      @media (min-width: 480px) {
+        margin-bottom: 0;
+        margin-right: $spacing-03;
+      }
+    }
+  }
+}

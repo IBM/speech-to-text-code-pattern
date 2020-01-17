@@ -1,0 +1,104 @@
+{
+  "name": "@ibm-watson/speech-to-text-code-pattern",
+  "version": "0.1.0",
+  "proxy": "http://localhost:5000",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "express-secure-only": "^0.2.1",
+    "helmet": "^3.21.2",
+    "ibm-watson": "^5.2.1",
+    "isomorphic-fetch": "^2.2.1",
+    "morgan": "^1.9.1",
+    "vcap_services": "^0.7.1",
+    "watson-speech": "^0.37.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm:client\" \"npm:server\"",
+    "client": "react-scripts start",
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "test": "npm run test:components && npm run test:integration",
+    "test:components": "cross-env CI=true react-scripts test --env=jsdom --passWithNoTests",
+    "test:integration": "JEST_PUPPETEER_CONFIG='test/jest-puppeteer.config.js' jest test -c test/jest.config.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "engines": {
+    "node": "12.13.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "./**/*.{js,scss,html,png,yaml,yml}": [
+      "npm run build",
+      "git add build/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@carbon/themes": "^10.9.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "carbon-components": "^10.9.0",
+    "carbon-components-react": "^7.9.0",
+    "carbon-icons": "^7.0.7",
+    "carbon-themes": "^1.7.0",
+    "husky": "^4.0.10",
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.4.0",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "puppeteer": "^2.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-json-tree": "^0.11.2",
+    "react-json-view": "^1.19.1",
+    "react-scripts": "3.3.0"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  },
+  "nodemonConfig": {
+    "watch": [
+      "app.js",
+      "config/**/*.js",
+      "server.js"
+    ],
+    "ext": "js",
+    "ignore": [
+      ".git",
+      "node_modules",
+      "public",
+      "src",
+      "test"
+    ],
+    "delay": 500
+  }
+}

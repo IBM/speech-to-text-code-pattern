@@ -1,0 +1,9 @@
+.bx--link {
+  &:focus {
+    outline: none;
+  }
+
+  &:visited {
+    color: $blue-40;
+  }
+}
