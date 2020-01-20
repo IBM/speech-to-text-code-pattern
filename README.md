@@ -10,7 +10,7 @@
 </p>
 </p>
 
-✨ **Demo:** https://speech-to-text-code-pattern.mybluemix.net/ ✨
+✨ **Demo:** https://speech-to-text-code-pattern.ng.bluemix.net/ ✨
 
 ## Flow
 
