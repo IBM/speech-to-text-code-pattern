@@ -17,15 +17,15 @@ let bearerToken = process.env.SPEECH_TO_TEXT_BEARER_TOKEN;
 let username = process.env.SPEECH_TO_TEXT_USERNAME;
 let password = process.env.SPEECH_TO_TEXT_PASSWORD;
 
+// On Cloud Foundry, we'll have a VCAP_SERVICES environment variable with credentials.
+let vcapCredentials = vcapServices.getCredentials('speech_to_text');
+
 // Create appropriate token manager.
 let tokenManager;
-if (apikey) {
-  // If we're using IAM, it's possible that we're running on Cloud Foundry, where we need to look at the VCAP_SERVICES.
-  const vcapCredentials = vcapServices.getCredentials('speech_to_text');
-  if (vcapCredentials) {
-    apikey = vcapCredentials.apikey || apikey;
-    url = vcapCredentials.url || url;
-  }
+if (vcapCredentials || apikey) {
+  // Choose credentials from VCAP if they exist.
+  apikey = (vcapCredentials && vcapCredentials.apikey) || apikey;
+  url = (vcapCredentials && vcapCredentials.url) || url;
 
   try {
     tokenManager = new IamTokenManager({ apikey });
