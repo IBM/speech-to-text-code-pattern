@@ -12,6 +12,6 @@ pip install selenium
 
 With the application running locally (with `npm run start` or `ibmcloud dev run`), export the necessary environment variables, and run the Python web experience test in this directory.
 ```bash
-export APP_URL=https://localhost:3000 # default value for the local application
+export APP_URL=https://localhost:5000 # default value for the local application
 python3 experience_test.py
 ```
