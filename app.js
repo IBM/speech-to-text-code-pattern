@@ -6,38 +6,39 @@ const app = express();
 require('./config/express')(app);
 
 let url = process.env.SPEECH_TO_TEXT_URL;
-
-// Supply the API key for IAM authentication.
-let apikey = process.env.SPEECH_TO_TEXT_APIKEY;
-
-// Supply the bearer token + URL for an instance on CPD (see the README for more details).
 let bearerToken = process.env.SPEECH_TO_TEXT_BEARER_TOKEN;
 
-// Supply the username + password + URL as an alternative for an instance on CPD.
-let username = process.env.SPEECH_TO_TEXT_USERNAME;
-let password = process.env.SPEECH_TO_TEXT_PASSWORD;
-
-// On Cloud Foundry, we'll have a VCAP_SERVICES environment variable with credentials.
-let vcapCredentials = vcapServices.getCredentials('speech_to_text');
-
-// Create appropriate token manager.
-let tokenManager;
-if (vcapCredentials || apikey) {
-  // Choose credentials from VCAP if they exist.
-  apikey = (vcapCredentials && vcapCredentials.apikey) || apikey;
-  url = (vcapCredentials && vcapCredentials.url) || url;
-
-  try {
-    tokenManager = new IamTokenManager({ apikey });
-  } catch (err) {
-    console.error('Error creating IAM token manager: ', err);
+// Ensure we have a SPEECH_TO_TEXT_AUTH_TYPE so we can get a token for the UI.
+let sttAuthType = process.env.SPEECH_TO_TEXT_AUTH_TYPE;
+if (!sttAuthType) {
+  sttAuthType = 'iam';
+} else {
+  sttAuthType = sttAuthType.toLowerCase();
+}
+// Get a token manager for IAM or CP4D.
+let tokenManager = false;
+if (sttAuthType === 'cp4d') {
+  tokenManager = new Cp4dTokenManager({
+    username: process.env.SPEECH_TO_TEXT_USERNAME,
+    password: process.env.SPEECH_TO_TEXT_PASSWORD,
+    url: process.env.SPEECH_TO_TEXT_AUTH_URL,
+    disableSslVerification: process.env.SPEECH_TO_TEXT_AUTH_DISABLE_SSL || false
+  });
+} else if (sttAuthType === 'iam') {
+  let apikey = process.env.SPEECH_TO_TEXT_APIKEY;
+  if (!(apikey && url)) {
+    // If no runtime env override for both, then try VCAP_SERVICES.
+    const vcapCredentials = vcapServices.getCredentials('speech_to_text');
+    // Env override still takes precedence.
+    apikey = apikey || vcapCredentials.apikey;
+    url = url || vcapCredentials.url;
   }
-} else if (username && password && url) {
-  try {
-    tokenManager = new Cp4dTokenManager({ username, password, url });
-  } catch (err) {
-    console.error('Error creating CP4D token manager: ', err);
-  }
+  tokenManager = new IamTokenManager({ apikey });
+} else if (sttAuthType === 'bearertoken') {
+  console.log('SPEECH_TO_TEXT_AUTH_TYPE=bearertoken is for dev use only.');
+} else {
+  console.log('SPEECH_TO_TEXT_AUTH_TYPE =', sttAuthType);
+  console.log('SPEECH_TO_TEXT_AUTH_TYPE is not recognized.');
 }
 
 const getToken = async () => {
@@ -69,6 +70,7 @@ const getToken = async () => {
       };
     }
   } catch (err) {
+    console.log("Error: ", err);
     tokenResponse = {
       ...tokenResponse,
       error: {
