@@ -33,7 +33,11 @@ if (sttAuthType === 'cp4d') {
     apikey = apikey || vcapCredentials.apikey;
     url = url || vcapCredentials.url;
   }
-  tokenManager = new IamTokenManager({ apikey });
+  try {
+    tokenManager = new IamTokenManager({ apikey });
+  } catch (err) {
+    console.log("Error: ", err);
+  }
 } else if (sttAuthType === 'bearertoken') {
   console.log('SPEECH_TO_TEXT_AUTH_TYPE=bearertoken is for dev use only.');
 } else {
