@@ -38,7 +38,7 @@ For the **Speech to Text** service, the following settings are needed:
 * Set <b>SPEECH_TO_TEXT_AUTH_TYPE</b> to <b>cp4d</b>
 * Provide the <b>SPEECH_TO_TEXT_URL</b>, <b>SPEECH_TO_TEXT_USERNAME</b> and <b>SPEECH_TO_TEXT_PASSWORD</b> collected in the previous step.
 * For the <b>SPEECH_TO_TEXT_AUTH_URL</b> use the base fragment of your URL including the host and port. <i>I.e. https://{cpd_cluster_host}{:port}</i>.
-* If your CPD installation is using a self-signed certificate, you need to disable SSL verification with <b>SPEECH_TO_TEXT_AUTH_DISABLE_SSL</b> set to true. Disable SSL only if absolutely necessary, and take steps to enable SSL as soon as possible.
+* If your CPD installation is using a self-signed certificate, you need to disable SSL verification with <b>SPEECH_TO_TEXT_AUTH_DISABLE_SSL</b> set to true. You might also need to use browser-specific steps to ignore certificate errors (try browsing to the AUTH_URL). Disable SSL only if absolutely necessary, and take steps to enable SSL as soon as possible.
 * Make sure the examples for IBM Cloud and bearer token auth are commented out (or removed).
 
 ```bash
