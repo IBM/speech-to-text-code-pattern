@@ -5,6 +5,19 @@ const vcapServices = require('vcap_services');
 const app = express();
 require('./config/express')(app);
 
+// For starter kit env.
+require('dotenv').config({
+  silent: true
+});
+const pEnv = process.env;
+
+if (pEnv.service_watson_speech_to_text && !pEnv.VCAP_SERVICES && !pEnv.SPEECH_TO_TEXT_APIKEY && !pEnv.SPEECH_TO_TEXT_URL && !pEnv.SPEECH_TO_TEXT_USERNAME) {
+  // If we don't have the expected environment variables, use the starter kit apikey and url.
+  let skitJson = JSON.parse(pEnv.service_watson_speech_to_text);
+  process.env.SPEECH_TO_TEXT_APIKEY = skitJson.apikey;
+  process.env.SPEECH_TO_TEXT_URL = skitJson.url;
+}
+
 let url = process.env.SPEECH_TO_TEXT_URL;
 let bearerToken = process.env.SPEECH_TO_TEXT_BEARER_TOKEN;
 
