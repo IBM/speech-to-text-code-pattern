@@ -1,4 +1,8 @@
-FROM node:12-alpine AS base
+FROM registry.access.redhat.com/ubi8/ubi AS base
+
+RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+RUN yum install -y nodejs
+
 WORKDIR /app
 
 FROM base as build
