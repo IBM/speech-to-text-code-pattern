@@ -24,7 +24,7 @@
     "client": "react-scripts start",
     "server": "nodemon server.js",
     "start": "node server.js",
-    "build": "react-scripts build",
+    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
     "test": "npm run test:components && npm run test:integration",
     "test:components": "cross-env CI=true react-scripts test --env=jsdom --passWithNoTests",
     "test:integration": "JEST_PUPPETEER_CONFIG='test/jest-puppeteer.config.js' jest test -c test/jest.config.js"
