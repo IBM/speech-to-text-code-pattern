@@ -5,7 +5,21 @@ const rateLimit = require('express-rate-limit');
 
 module.exports = function secureApp(app) {
   app.use(secure());
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: ["'self'"],
+          scriptSrc: ["'self'"],
+          connectSrc: ["'self'", "wss://*.speech-to-text.watson.cloud.ibm.com"],
+          fontSrc: ["'self'", "https://fonts.gstatic.com"],
+          imageSrc: ["'self"],
+          objectSrc: ["'none'"],
+          upgradeInsecureRequests: [],
+        }
+      }
+    })
+  );
 
   const limiter = rateLimit({
     windowMs: 30 * 1000, // seconds
