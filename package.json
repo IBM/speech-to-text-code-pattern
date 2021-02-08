@@ -17,7 +17,7 @@
     "isomorphic-fetch": "^3.0.0",
     "morgan": "^1.10.0",
     "vcap_services": "^0.7.1",
-    "watson-speech": "^0.38.1"
+    "watson-speech": "^0.39.0"
   },
   "scripts": {
     "dev": "concurrently \"npm:client\" \"npm:server\"",
@@ -33,7 +33,7 @@
     "extends": "react-app"
   },
   "engines": {
-    "node": "12.13.0"
+    "node": "14.15.4"
   },
   "browserslist": {
     "production": [
@@ -78,7 +78,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-json-tree": "^0.13.0",
-    "react-json-view": "^1.19.1",
+    "react-json-view": "^1.21.1",
     "react-scripts": "3.4.3"
   },
   "prettier": {
