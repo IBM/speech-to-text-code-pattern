@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/ubi AS base
 
-RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://rpm.nodesource.com/setup_14.x | bash -
 RUN yum install -y nodejs
 
 WORKDIR /app
@@ -27,6 +27,8 @@ COPY --from=build /app/config /app/config
 COPY --from=build /app/*.js* /app/
 
 RUN npm install --only=prod
+
+ENV PORT 5000
 
 EXPOSE 5000
 CMD ["npm", "start"]

@@ -9,16 +9,13 @@ require('./config/express')(app);
 require('dotenv').config({
   silent: true
 });
-const pEnv = process.env;
+const skitJson = JSON.parse(process.env.service_watson_speech_to_text || "{}");
+const vcapCredentials = vcapServices.getCredentials('speech_to_text');
 
-if (pEnv.service_watson_speech_to_text && !pEnv.VCAP_SERVICES && !pEnv.SPEECH_TO_TEXT_APIKEY && !pEnv.SPEECH_TO_TEXT_URL && !pEnv.SPEECH_TO_TEXT_USERNAME) {
-  // If we don't have the expected environment variables, use the starter kit apikey and url.
-  let skitJson = JSON.parse(pEnv.service_watson_speech_to_text);
-  process.env.SPEECH_TO_TEXT_APIKEY = skitJson.apikey;
-  process.env.SPEECH_TO_TEXT_URL = skitJson.url;
-}
+// Look for credentials in all the possible places
+const apikey = skitJson?.apiKey || vcapCredentials?.apikey || process.env.SPEECH_TO_TEXT_APIKEY || process.env.SPEECHTOTEXT_APIKEY;
+const url = skitJson?.url || vcapCredentials?.url || process.env.SPEECH_TO_TEXT_URL || process.env.SPEECHTOTEXT_URL;
 
-let url = process.env.SPEECH_TO_TEXT_URL;
 let bearerToken = process.env.SPEECH_TO_TEXT_BEARER_TOKEN;
 
 // Ensure we have a SPEECH_TO_TEXT_AUTH_TYPE so we can get a token for the UI.
@@ -38,14 +35,6 @@ if (sttAuthType === 'cp4d') {
     disableSslVerification: process.env.SPEECH_TO_TEXT_AUTH_DISABLE_SSL || false
   });
 } else if (sttAuthType === 'iam') {
-  let apikey = process.env.SPEECH_TO_TEXT_APIKEY;
-  if (!(apikey && url)) {
-    // If no runtime env override for both, then try VCAP_SERVICES.
-    const vcapCredentials = vcapServices.getCredentials('speech_to_text');
-    // Env override still takes precedence.
-    apikey = apikey || vcapCredentials.apikey;
-    url = url || vcapCredentials.url;
-  }
   try {
     tokenManager = new IamTokenManager({ apikey });
   } catch (err) {
