@@ -13,8 +13,8 @@ const skitJson = JSON.parse(process.env.service_watson_speech_to_text || "{}");
 const vcapCredentials = vcapServices.getCredentials('speech_to_text');
 
 // Look for credentials in all the possible places
-const apikey = skitJson?.apikey || vcapCredentials?.apikey || process.env.SPEECH_TO_TEXT_APIKEY || process.env.SPEECHTOTEXT_APIKEY;
-const url = skitJson?.url || vcapCredentials?.url || process.env.SPEECH_TO_TEXT_URL || process.env.SPEECHTOTEXT_URL;
+const apikey = process.env.SPEECH_TO_TEXT_APIKEY || process.env.SPEECHTOTEXT_APIKEY || vcapCredentials?.apikey || skitJson?.apikey;
+const url = process.env.SPEECH_TO_TEXT_URL || process.env.SPEECHTOTEXT_URL || vcapCredentials?.url || skitJson?.url;
 
 let bearerToken = process.env.SPEECH_TO_TEXT_BEARER_TOKEN;
 
