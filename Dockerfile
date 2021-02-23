@@ -1,5 +1,6 @@
-FROM registry.access.redhat.com/ubi8/ubi AS base
+FROM registry.access.redhat.com/ubi8:8.3 AS base
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sL https://rpm.nodesource.com/setup_14.x | bash -
 RUN yum install -y nodejs
 
