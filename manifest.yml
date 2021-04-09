@@ -9,6 +9,6 @@ applications:
   instances: 1
   name: speech-to-text-code-pattern
   buildpacks:
-  - sdk-for-nodejs
+  - nodejs-buildpack
   services:
   - sttcp-speech-to-text
