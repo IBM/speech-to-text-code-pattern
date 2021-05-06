@@ -1,8 +1,0 @@
-language: node_js
-sudo: required
-node_js:
-  - "node"
-  - "lts/*"
-script:
-  - npm run build
-  - npm run test
