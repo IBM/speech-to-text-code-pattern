@@ -33,7 +33,7 @@
     "extends": "react-app"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.15.5"
   },
   "browserslist": {
     "production": [
