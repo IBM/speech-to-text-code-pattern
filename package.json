@@ -67,7 +67,7 @@
     "carbon-components-react": "^7.29.0",
     "carbon-icons": "^7.0.7",
     "carbon-themes": "^1.7.0",
-    "husky": "^4.3.0",
+    "husky": "^6.0.0",
     "jest": "^24.9.0",
     "jest-puppeteer": "^4.4.0",
     "lint-staged": "^10.4.0",
