@@ -7,6 +7,7 @@
     "body-parser": "^1.19.0",
     "concurrently": "^6.2.0",
     "cross-env": "^7.0.3",
+    "dart-sass": "^1.25.0",
     "dotenv": "^8.2.0",
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
@@ -27,7 +28,8 @@
     "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
     "test": "npm run test:components && npm run test:integration",
     "test:components": "cross-env CI=true react-scripts test --env=jsdom --passWithNoTests",
-    "test:integration": "JEST_PUPPETEER_CONFIG='test/jest-puppeteer.config.js' jest test -c test/jest.config.js"
+    "test:integration": "JEST_PUPPETEER_CONFIG='test/jest-puppeteer.config.js' jest test -c test/jest.config.js",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -62,11 +64,11 @@
     "carbon-components-react": "^7.29.0",
     "carbon-icons": "^7.0.7",
     "carbon-themes": "^1.7.0",
-    "dart-sass": "^1.25.0",
     "husky": "^6.0.0",
     "jest": "^24.9.0",
     "jest-puppeteer": "^4.4.0",
     "lint-staged": "^10.4.0",
+    "node-sass": "npm:dart-sass@^1.25.0",
     "nodemon": "^2.0.7",
     "prettier": "^2.1.2",
     "puppeteer": "^5.3.1",
