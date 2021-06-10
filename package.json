@@ -53,11 +53,6 @@
       "git add build/*"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "devDependencies": {
     "@carbon/themes": "^10.19.0",
     "@testing-library/jest-dom": "^5.13.0",
