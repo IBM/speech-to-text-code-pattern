@@ -1,31 +1,27 @@
-FROM registry.access.redhat.com/ubi8:8.4 AS base
+FROM registry.access.redhat.com/ubi8/nodejs-14-minimal:1 AS base
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-RUN curl -sL https://rpm.nodesource.com/setup_14.x | bash -
-RUN yum install -y nodejs
-
-WORKDIR /app
+WORKDIR /opt/app-root/src
 
 FROM base as build
-COPY ./package*.js* /app/
+COPY ./package*.js* /opt/app-root/src/
 RUN npm set progress=false && \
   npm config set depth 0 && \
   npm install
 
-COPY ./config /app/config
-COPY ./public /app/public
-COPY ./src /app/src
-COPY ./test /app/test
-COPY ./*.js /app/
+COPY ./config /opt/app-root/src/config
+COPY ./public /opt/app-root/src/public
+COPY ./src /opt/app-root/src/src
+COPY ./test /opt/app-root/src/test
+COPY ./*.js /opt/app-root/src/
 
 RUN npm run build
 RUN npm run test:components
 
 FROM base as release
 
-COPY --from=build /app/build /app/build
-COPY --from=build /app/config /app/config
-COPY --from=build /app/*.js* /app/
+COPY --from=build /opt/app-root/src/build /opt/app-root/src/build
+COPY --from=build /opt/app-root/src/config /opt/app-root/src/config
+COPY --from=build /opt/app-root/src/*.js* /opt/app-root/src/
 
 RUN npm install --only=prod
 
