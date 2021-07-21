@@ -6,7 +6,7 @@ FROM base as build
 COPY ./package*.js* /opt/app-root/src/
 RUN npm set progress=false && \
   npm config set depth 0 && \
-  npm install
+  npm ci --only-production --ignore-scripts
 
 COPY ./config /opt/app-root/src/config
 COPY ./public /opt/app-root/src/public
