@@ -60,7 +60,7 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.0",
     "carbon-components": "^10.40.1",
-    "carbon-components-react": "^7.39.0",
+    "carbon-components-react": "^7.40.1",
     "carbon-icons": "^7.0.7",
     "carbon-themes": "^1.7.0",
     "husky": "^7.0.1",
