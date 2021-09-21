@@ -14,7 +14,7 @@
     "express-rate-limit": "^5.3.0",
     "express-secure-only": "^0.2.1",
     "helmet": "^4.6.0",
-    "ibm-watson": "^6.1.1",
+    "ibm-watson": "^6.2.1",
     "isomorphic-fetch": "^3.0.0",
     "morgan": "^1.10.0",
     "vcap_services": "^0.7.1",
