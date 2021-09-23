@@ -59,7 +59,7 @@
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "carbon-components": "^10.41.0",
+    "carbon-components": "^10.44.0",
     "carbon-components-react": "^7.41.0",
     "carbon-icons": "^7.0.7",
     "carbon-themes": "^1.7.0",
