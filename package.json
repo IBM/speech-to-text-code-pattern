@@ -69,7 +69,7 @@
     "jest-puppeteer": "^5.0.4",
     "lint-staged": "^11.2.3",
     "node-sass": "npm:dart-sass@^1.25.0",
-    "nodemon": "^2.0.13",
+    "nodemon": "^2.0.15",
     "prettier": "^2.4.1",
     "puppeteer": "<10",
     "react": "^17.0.2",
