@@ -4,7 +4,7 @@
   "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
-    "@types/react": "^17.0.30",
+    "@types/react": "^17.0.37",
     "body-parser": "^1.19.0",
     "concurrently": "^6.3.0",
     "cross-env": "^7.0.3",
