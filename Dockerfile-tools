@@ -1,4 +1,4 @@
-FROM ibmcom/ibmnode
+FROM registry.access.redhat.com/ubi8/nodejs-16-minimal:1
 
 ADD . /app
 
