@@ -51,7 +51,7 @@ describe('Input methods', () => {
     await (await page.waitForXPath('//*[text()="US English (16khz Broadband)"]', TIMEOUT)).click();
 
     // Upload file.
-    await (await page.waitForXPath('//*[@id="id1"]', TIMEOUT)).uploadFile('../public/audio/en-US_Broadband-sample.wav');
+    await (await page.waitForXPath('//*[@id="id1"]', TIMEOUT)).uploadFile('public/audio/en-US_Broadband-sample.wav');
 
     // Wait for the audio to play for a bit.
     await page.waitForTimeout(5000);
