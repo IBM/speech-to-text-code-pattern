@@ -1,63 +1,68 @@
 /* eslint-disable no-undef */
 jest.setTimeout(10000);
 
+const TIMEOUT = { timeout: 3000 };
 describe('Input methods', () => {
   beforeEach(async () => {
     await page.goto('http://localhost:5000');
   });
 
   it('Sample audio', async () => {
-    await page.waitFor('div.bx--dropdown', { timeout: 0 });
 
-    // Choose language model.
-    await expect(page).toClick('div.bx--dropdown');
-    await expect(page).toClick('div.bx--list-box__menu-item__option', {
-      text: 'US English (8khz Narrowband)',
-    });
+    await page.content();
+
+    // Select English
+    await (await page.waitForXPath('//*[@id="language-model-dropdown"]', TIMEOUT)).click();
+    await (await page.waitForXPath('//*[text()="US English (8khz Narrowband)"]', TIMEOUT)).click();
 
     // Add custom keywords.
-    await expect(page).toFill('textarea.bx--text-area', 'course, I');
+    const TEST_KEYWORDS = ', course, I';
+    const keywords = await page.waitForXPath('//*[@class="bx--text-area bx--text-area--light"]', TIMEOUT);
+    await keywords.type(TEST_KEYWORDS);
+    const keywordsContent = await page.evaluate(el => el.textContent, keywords);
+    expect(keywordsContent).toContain(TEST_KEYWORDS)
 
     // Choose to detect speakers.
-    await expect(page).toClick('span.bx--toggle__switch');
+    await (await page.waitForXPath('//*[@class="bx--toggle__switch"]', TIMEOUT)).click();
 
     // Play sample audio.
-    await expect(page).toClick('button.submit-button', {
-      text: 'Play audio sample',
-    });
+    await (await page.waitForXPath('//*[text()="Play audio sample"]', TIMEOUT)).click();
 
     // Wait for the audio to play for a bit.
-    await page.waitFor(5000);
+    await page.waitForTimeout(5000);
 
-    // Assert that some transcript text has shown up.
-    const transcriptBox = await page.$('div.transcript-box');
-    const text = await transcriptBox.getProperty('textContent');
-    expect(text).toBeTruthy();
+    // Check transcript (CI checks box exists. Missing creds to check content.)
+    expect(await page.waitForXPath('//*[@class="transcript-box"]', TIMEOUT)).toBeTruthy();
+
+    /* With proper creds, this logs content and tests first words...
+    const transcriptElement = await page.waitForXPath('//*[@class="transcript-box"]/div/span', TIMEOUT);
+    const transcript = await page.evaluate(el => el.textContent, transcriptElement);
+    console.log("TRANSCRIPT: ", transcript);
+    expect(transcript).toContain("Thank you");
+     */
   });
 
   it('File upload', async () => {
-    await page.waitFor('div.bx--dropdown', {
-      timeout: 0,
-    });
 
-    // Choose language model.
-    await expect(page).toClick('div.bx--dropdown');
-    await expect(page).toClick('div.bx--list-box__menu-item__option', {
-      text: 'US English (16khz Broadband)',
-    });
+    await page.content();
+
+    // Select English
+    await (await page.waitForXPath('//*[@id="language-model-dropdown"]', TIMEOUT)).click();
+    await (await page.waitForXPath('//*[text()="US English (16khz Broadband)"]', TIMEOUT)).click();
 
     // Upload file.
-    await expect(page).toUploadFile(
-      'input.bx--visually-hidden',
-      'public/audio/en-US_Broadband-sample.wav',
-    );
+    await (await page.waitForXPath('//*[@id="id1"]', TIMEOUT)).uploadFile('../public/audio/en-US_Broadband-sample.wav');
 
     // Wait for the audio to play for a bit.
-    await page.waitFor(5000);
+    await page.waitForTimeout(5000);
 
-    // Assert that some transcript text has shown up.
-    const transcriptBox = await page.$('div.transcript-box');
-    const text = await transcriptBox.getProperty('textContent');
-    expect(text).toBeTruthy();
+    // Check transcript (CI checks box exists. Missing creds to check content.)
+    expect(await page.waitForXPath('//*[@class="transcript-box"]', TIMEOUT)).toBeTruthy();
+
+    /* With proper creds, this logs content and tests first words...
+    const transcript = await page.evaluate(el => el.textContent, await page.waitForXPath('//*[@class="transcript-box"]/div/span', TIMEOUT));
+    console.log("TRANSCRIPT: ", transcript);
+    expect(transcript).toContain("So thank you very much for coming");
+     */
   });
 });
