@@ -13,7 +13,7 @@
     "dotenv": "^10.0.0",
     "es6-promise": "^4.2.8",
     "express": "^4.17.1",
-    "express-rate-limit": "^5.5.1",
+    "express-rate-limit": "^6.2.1",
     "express-secure-only": "^0.2.1",
     "helmet": "^4.6.0",
     "husky": "^7.0.4",
