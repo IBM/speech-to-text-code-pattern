@@ -71,7 +71,7 @@
     "carbon-icons": "^7.0.7",
     "carbon-themes": "^1.7.0",
     "jest": "27.5.1",
-    "jest-puppeteer": "^6.0.3",
+    "jest-puppeteer": "^6.1.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "puppeteer": "^13",
