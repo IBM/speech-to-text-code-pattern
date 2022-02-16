@@ -6,7 +6,7 @@
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@types/react": "^17.0.39",
-    "body-parser": "^1.19.1",
+    "body-parser": "^1.19.2",
     "buffer": "^6.0.3",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
