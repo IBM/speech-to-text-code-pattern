@@ -80,7 +80,7 @@
     "react-json-tree": "^0.16.1",
     "react-json-view": "^1.21.3",
     "react-scripts": "^5.0.0",
-    "webpack": "^5.65.0"
+    "webpack": "^5.69.0"
   },
   "prettier": {
     "trailingComma": "all",
