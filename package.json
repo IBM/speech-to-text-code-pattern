@@ -12,7 +12,7 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
     "es6-promise": "^4.2.8",
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "express-rate-limit": "^6.2.1",
     "express-secure-only": "^0.2.1",
     "helmet": "^5.0.2",
