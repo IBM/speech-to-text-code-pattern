@@ -6,14 +6,14 @@
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@types/react": "^17.0.39",
-    "body-parser": "^1.19.1",
+    "body-parser": "^1.19.2",
     "buffer": "^6.0.3",
     "concurrently": "^7.0.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
     "es6-promise": "^4.2.8",
-    "express": "^4.17.2",
-    "express-rate-limit": "^6.2.1",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
     "express-secure-only": "^0.2.1",
     "helmet": "^5.0.2",
     "husky": "^7.0.4",
@@ -22,7 +22,7 @@
     "lint-staged": "^12.3.4",
     "morgan": "^1.10.0",
     "process": "^0.11.10",
-    "sass": "^1.49.7",
+    "sass": "^1.49.8",
     "stream-browserify": "^3.0.0",
     "vcap_services": "^0.7.1",
     "watson-speech": "^0.39.0"
@@ -80,7 +80,7 @@
     "react-json-tree": "^0.16.1",
     "react-json-view": "^1.21.3",
     "react-scripts": "^5.0.0",
-    "webpack": "^5.69.0"
+    "webpack": "^5.69.1"
   },
   "prettier": {
     "trailingComma": "all",
