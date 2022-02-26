@@ -25,7 +25,7 @@
     "sass": "^1.49.9",
     "stream-browserify": "^3.0.0",
     "vcap_services": "^0.7.1",
-    "watson-speech": "^0.39.0"
+    "watson-speech": "^0.39.1"
   },
   "scripts": {
     "dev": "concurrently \"npm:client\" \"npm:server\"",
