@@ -67,7 +67,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "carbon-components": "^10.55.1",
-    "carbon-components-react": "^7.55.1",
+    "carbon-components-react": "^8.0.1",
     "carbon-icons": "^7.0.7",
     "carbon-themes": "^1.7.0",
     "jest": "27.5.1",
