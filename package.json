@@ -73,7 +73,7 @@
     "jest": "27.5.1",
     "jest-puppeteer": "^6.1.0",
     "nodemon": "^2.0.15",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "puppeteer": "^13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
