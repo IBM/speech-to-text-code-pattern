@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Button, FileUploaderButton } from 'carbon-components-react';
+import { Button, FileUploaderButton } from '@carbon/react';
 import fetch from 'isomorphic-fetch';
 import models from '../../data/models.json';
 

@@ -1,3 +1,6 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+
 .submit-container {
   display: flex;
   flex-direction: column;

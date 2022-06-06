@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { ToastNotification } from 'carbon-components-react';
+import { ToastNotification } from '@carbon/react';
 
 const NOTIFICATION_HAS_BEEN_SEEN = 'notificationHasBeenSeen';
 
@@ -10,7 +10,6 @@ export const Toast = ({
   className,
   hideAfterFirstDisplay,
   hideCloseButton,
-  iconDescription,
   kind,
   lowContrast,
   onCloseButtonClick,
@@ -43,8 +42,8 @@ export const Toast = ({
   useEffect(() => {
     if (
       hideAfterFirstDisplay &&
-      typeof window !== undefined &&
-      typeof window.localStorage !== undefined &&
+      typeof window !== 'undefined' &&
+      typeof window.localStorage !== 'undefined' &&
       window.localStorage.getItem(NOTIFICATION_HAS_BEEN_SEEN) === 'true'
     ) {
       setHideToast(true);
@@ -56,14 +55,13 @@ export const Toast = ({
       caption={caption}
       className={`custom-toast-${id} ${className}`}
       hideCloseButton={hideCloseButton}
-      iconDescription={iconDescription}
       kind={kind}
       lowContrast={lowContrast}
       onCloseButtonClick={() => {
         if (
           hideAfterFirstDisplay &&
-          typeof window !== undefined &&
-          typeof window.localStorage !== undefined
+          typeof window !== 'undefined' &&
+          typeof window.localStorage !== 'undefined'
         ) {
           window.localStorage.setItem(NOTIFICATION_HAS_BEEN_SEEN, 'true');
         }
@@ -85,7 +83,6 @@ Toast.propTypes = {
   className: PropTypes.string,
   hideAfterFirstDisplay: PropTypes.bool,
   hideCloseButton: PropTypes.bool,
-  iconDescription: PropTypes.string,
   kind: PropTypes.string,
   lowContrast: PropTypes.bool,
   onCloseButtonClick: PropTypes.func,
@@ -101,7 +98,6 @@ Toast.defaultProps = {
   className: '',
   hideAfterFirstDisplay: true,
   hideCloseButton: false,
-  iconDescription: 'closes notification',
   kind: 'error',
   lowContrast: false,
   onCloseButtonClick: () => {},
