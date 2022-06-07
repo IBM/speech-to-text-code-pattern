@@ -1,10 +1,10 @@
 // Set theme.
-@import '~@carbon/themes/scss/themes';
-$carbon--theme: $carbon--theme--g10;
-@include carbon--theme();
-
+@use '@carbon/react/scss/themes';
+@use '@carbon/react/scss/theme' with (
+  $theme: themes.$g10
+);
 // vendors
-@import '~carbon-components/scss/globals/scss/styles.scss';
+@use '@carbon/react';
 
 @import './index';
 

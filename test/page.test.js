@@ -17,13 +17,13 @@ describe('Input methods', () => {
 
     // Add custom keywords.
     const TEST_KEYWORDS = ', course, I';
-    const keywords = await page.waitForXPath('//*[@class="bx--text-area bx--text-area--light"]', TIMEOUT);
+    const keywords = await page.waitForXPath('//*[@class="cds--text-area cds--text-area--light"]', TIMEOUT);
     await keywords.type(TEST_KEYWORDS);
     const keywordsContent = await page.evaluate(el => el.textContent, keywords);
     expect(keywordsContent).toContain(TEST_KEYWORDS)
 
     // Choose to detect speakers.
-    await (await page.waitForXPath('//*[@class="bx--toggle__switch"]', TIMEOUT)).click();
+    await (await page.waitForXPath('//*[@class="cds--toggle__switch"]', TIMEOUT)).click();
 
     // Play sample audio.
     await (await page.waitForXPath('//*[text()="Play audio sample"]', TIMEOUT)).click();

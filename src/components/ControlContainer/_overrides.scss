@@ -1,20 +1,35 @@
-div.bx--dropdown.bx--list-box {
-  .bx--list-box__menu {
-    background-color: $ui-02;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/spacing' as *;
 
-    div.bx--list-box__menu-item.bx--list-box__menu-item--highlighted {
-      background-color: $ui-03;
-    }
+.cds--dropdown.cds--list-box {
+  background-color: $layer-02;
+
+  .cds--list-box__menu {
+    background-color: $layer-02;
+  }
+
+  .cds--list-box__field {
+    background-color: $layer-02;
+    border-bottom: 1px solid $border-strong-01;
+  }
+
+  .cds--list-box__field:hover {
+    background-color: $field-hover;
+  }
+
+  .cds--list-box__menu-item.cds--list-box__menu-item--highlighted {
+    background-color: $layer-accent-01;
   }
 }
 
-.bx--fieldset {
+.cds--fieldset {
   max-width: 100%;
   min-width: 100%;
   padding-bottom: $spacing-03;
+  margin-bottom: $spacing-07;
   width: 100%;
 }
 
-.bx--text-area__wrapper {
+.cds--text-area__wrapper {
   width: 100%;
 }

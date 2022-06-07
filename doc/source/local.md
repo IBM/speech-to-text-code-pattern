@@ -19,10 +19,10 @@ cd speech-to-text-code-pattern
 
 ### Configure credentials
 
-Copy the `env.sample` file to `.env`.
+Copy the `.env.example` file to `.env`.
 
 ```bash
-cp env.sample .env
+cp .env.example .env
 ```
 
 Edit the `.env` file to configure credentials before starting the Node.js server.
