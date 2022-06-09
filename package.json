@@ -76,7 +76,7 @@
     "react-json-tree": "^0.17.0",
     "react-json-view": "^1.21.3",
     "react-scripts": "^5.0.1",
-    "sass": "^1.52.2",
+    "sass": "^1.52.3",
     "webpack": "^5.73.0"
   },
   "prettier": {
