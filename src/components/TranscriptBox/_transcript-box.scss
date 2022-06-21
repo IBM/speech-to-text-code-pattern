@@ -1,6 +1,10 @@
+@use '@carbon/react/scss/components/button/' as *;
+@use '@carbon/react/scss/theme' as *;
+@use '@carbon/react/scss/spacing' as *;
+
 .transcript-box {
-  background-color: $ui-02;
-  border-bottom: 1px solid $ui-04;
+  background-color: $layer-02;
+  border-bottom: 1px solid $border-strong-01;
   min-height: 10rem;
   padding: $spacing-05;
 
@@ -13,12 +17,12 @@
     &.speaker-label {
       &--0 {
         font-weight: 700;
-        color: $interactive-01;
+        color: $button-primary;
       }
 
       &--1 {
         font-weight: 700;
-        color: $interactive-02;
+        color: $button-secondary;
       }
     }
   }

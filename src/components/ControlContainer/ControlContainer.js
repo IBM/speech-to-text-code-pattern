@@ -5,8 +5,8 @@ import {
   FormGroup,
   TextArea,
   Tile,
-  ToggleSmall,
-} from 'carbon-components-react';
+  Toggle,
+} from '@carbon/react';
 import SubmitContainer from '../SubmitContainer';
 import models from '../../data/models.json';
 
@@ -58,7 +58,6 @@ export const ControlContainer = ({
           onChange={onChangeLanguageModel}
           items={dropdownChoices}
           selectedItem={model && model.label}
-          defaultText="Select a language model"
           ariaLabel="Language selection dropdown"
           light
         />
@@ -78,8 +77,10 @@ export const ControlContainer = ({
         />
       </FormGroup>
       <FormGroup legendText="Detect multiple speakers (only supported with sample audio)">
-        <ToggleSmall
+        <Toggle
           id="speaker-label-toggle"
+          size='sm'
+          labelText=''
           aria-label="Speaker label toggle"
           disabled={!model || !model.supportsSpeakerLabels}
           toggled={useSpeakerLabels}

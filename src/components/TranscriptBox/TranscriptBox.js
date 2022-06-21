@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TooltipDefinition } from 'carbon-components-react';
+import { DefinitionTooltip } from '@carbon/react';
 import KeywordTooltip from '../KeywordTooltip';
 import { createWordRegex } from './utils';
 
@@ -97,11 +97,10 @@ export const TranscriptBox = ({ keywordInfo, transcriptArray }) => {
                 );
               } else if (element.type === 'keyword') {
                 return (
-                  <TooltipDefinition
-                    align="center"
-                    direction="top"
+                  <DefinitionTooltip
+                    align="top"
                     key={`transcript-keyword-${overallIndex}-${elementIndex}`}
-                    tooltipText={
+                    definition={
                       <KeywordTooltip
                         confidence={element.confidence}
                         startTime={element.startTime}
@@ -111,7 +110,7 @@ export const TranscriptBox = ({ keywordInfo, transcriptArray }) => {
                     triggerClassName="keyword-info-trigger"
                   >
                     {element.text}
-                  </TooltipDefinition>
+                  </DefinitionTooltip>
                 );
               }
 

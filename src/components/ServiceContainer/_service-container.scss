@@ -1,4 +1,8 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/theme' as *;
+
 .service-container {
+  background-color: $background;
   align-items: center;
   display: flex;
   flex-direction: column;

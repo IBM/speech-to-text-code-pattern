@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormGroup, Tile } from 'carbon-components-react';
+import { FormGroup, Tile } from '@carbon/react';
 import AudioWave from '../AudioWave';
 import TranscriptBox from '../TranscriptBox';
 
