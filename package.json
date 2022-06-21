@@ -64,7 +64,7 @@
     "@carbon/react": "^1.5.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
-    "@testing-library/user-event": "^14.2.0",
+    "@testing-library/user-event": "^14.2.1",
     "jest": "28.1.1",
     "jest-puppeteer": "^6.1.0",
     "nodemon": "^2.0.16",
