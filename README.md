@@ -68,8 +68,8 @@ Click on the service name to get back to the **Manage** view (where you can coll
 
 Click on one of the options below for instructions on deploying the Node.js server.
 
-|   |   |   |   |
-| - | - | - | - |
+|   |   |
+| - | - |
 | [![local](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/local.png)](doc/source/local.md) | [![openshift](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/openshift.png)](doc/source/openshift.md) |
 
 ## 3. Use the web app
