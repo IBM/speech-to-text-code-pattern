@@ -22,8 +22,6 @@ Sample React app for playing around with the Watson Speech to Text service.
 
 ## 1. Provision Watson Speech to Text
 
-> Note: You can skip this step if you will be using the `Deploy to Cloud Foundry on IBM Cloud` button below. That option automatically creates the service and binds it (providing its credentials) to the application.
-
 The instructions will depend on whether you are provisioning services using IBM Cloud Pak for Data or on IBM Cloud.
 
 **Click to expand one:**
@@ -70,9 +68,9 @@ Click on the service name to get back to the **Manage** view (where you can coll
 
 Click on one of the options below for instructions on deploying the Node.js server.
 
-|   |   |   |   |
-| - | - | - | - |
-| [![local](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/local.png)](doc/source/local.md) | [![openshift](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/openshift.png)](doc/source/openshift.md) | [![cf](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/cf.png)](doc/source/cf.md) |
+|   |   |
+| - | - |
+| [![local](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/local.png)](doc/source/local.md) | [![openshift](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/openshift.png)](doc/source/openshift.md) |
 
 ## 3. Use the web app
 
