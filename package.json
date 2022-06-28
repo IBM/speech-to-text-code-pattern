@@ -67,7 +67,7 @@
     "@testing-library/user-event": "^14.2.1",
     "jest": "28.1.1",
     "jest-puppeteer": "^6.1.0",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.18",
     "prettier": "^2.7.1",
     "puppeteer": "^15",
     "react": "^17.0.2",
