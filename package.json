@@ -61,7 +61,7 @@
     ]
   },
   "devDependencies": {
-    "@carbon/react": "^1.6.0",
+    "@carbon/react": "^1.7.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.2.1",
