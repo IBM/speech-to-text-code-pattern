@@ -75,7 +75,7 @@
     "react-json-tree": "^0.17.0",
     "react-json-view": "^1.21.3",
     "react-scripts": "^5.0.1",
-    "sass": "^1.54.0",
+    "sass": "^1.54.1",
     "webpack": "^5.74.0"
   },
   "overrides": {
