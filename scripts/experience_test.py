@@ -1,6 +1,7 @@
 import os, time, sys, datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 date = datetime.datetime.now().strftime("%Y-%m-%d-%H%M:%S:%f")
 
@@ -21,12 +22,12 @@ try:
         raise Exception("Title should be " + expected_title)
 
     # Find button and click it
-    sample_button = driver.find_element_by_xpath("//button[contains(text(),'Play audio sample')]")  # Locate the button
+    sample_button = driver.find_element(By.XPATH, "//button[contains(text(),'Play audio sample')]")  # Locate the button
     sample_button.click()
 
     # Verify the action on the app's landing page
     time.sleep(30)
-    transcript = driver.find_element_by_class_name('transcript-box').text.splitlines()
+    transcript = driver.find_element(By.CLASS_NAME, 'transcript-box').text.splitlines()
     print("Transcript: ", transcript)
     expected = "So thank you very much for coming"  # The beginning of the text...
 
