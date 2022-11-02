@@ -17,14 +17,14 @@
     "express-secure-only": "^0.2.1",
     "helmet": "^6.0.0",
     "husky": "^8.0.1",
-    "ibm-watson": "^7.1.1",
+    "ibm-watson": "^7.1.2",
     "isomorphic-fetch": "^3.0.0",
     "lint-staged": "^13.0.3",
     "morgan": "^1.10.0",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
     "vcap_services": "^0.7.1",
-    "watson-speech": "^0.40.0"
+    "watson-speech": "^0.41.0"
   },
   "scripts": {
     "dev": "concurrently \"npm:client\" \"npm:server\"",
@@ -61,7 +61,7 @@
     ]
   },
   "devDependencies": {
-    "@carbon/react": "^1.15.0",
+    "@carbon/react": "^1.16.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.4.3",
