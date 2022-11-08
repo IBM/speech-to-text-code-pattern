@@ -4,7 +4,7 @@
   "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.4.5",
+    "@craco/craco": "^7.0.0",
     "@types/react": "^18.0.12",
     "body-parser": "^1.20.1",
     "buffer": "^6.0.3",
