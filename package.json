@@ -16,7 +16,7 @@
     "express-rate-limit": "^6.6.0",
     "express-secure-only": "^0.2.1",
     "helmet": "^6.0.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.2",
     "ibm-watson": "^7.1.2",
     "isomorphic-fetch": "^3.0.0",
     "lint-staged": "^13.0.3",
