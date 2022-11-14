@@ -76,7 +76,7 @@
     "react-json-view": "^1.21.3",
     "react-scripts": "^5.0.1",
     "sass": "^1.56.1",
-    "webpack": "^5.74.0"
+    "webpack": "^5.75.0"
   },
   "overrides": {
     "@craco/craco": {
