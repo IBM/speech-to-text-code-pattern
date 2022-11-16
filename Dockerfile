@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/nodejs-16-minimal:1 AS base
+FROM registry.access.redhat.com/ubi8/nodejs-18-minimal:1 AS base
 
 USER 1001
 
